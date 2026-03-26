@@ -68,3 +68,41 @@ const myBalence ={
 
 const arr:number[]=[3,4,5];
 const newArr:number[]= arr.map((elem:number):number => elem *elem)
+
+{
+    // Spred operator
+
+    const bros1: string[]= ['Laltu','Maltu','Boltu'];
+    const bros2: string[]= ['Mukshes','Suresh','Romesh'];
+    bros1.push(...bros2);
+
+    const mentor1={
+        typescript: 'Boris',
+        redux: 'Paul',
+        rdms:'Emanual'
+    }
+    const mentor2={
+        next: 'Udemy',
+        docker:'Coursera'
+    }
+
+
+    //destructure
+    const mentorList={
+        ...mentor1,
+        ...mentor2
+    }
+
+    console.log(mentorList)
+
+    // rest operator
+
+    const greetFriends=(...fn1:string[])=>{
+
+    fn1.forEach((fn1:string) =>console.log(`Hi${fn1}`))
+    greetFriends("Abul","kabul","Babul");
+
+    };
+    
+    // Destructure
+}
