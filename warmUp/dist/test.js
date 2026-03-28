@@ -73,5 +73,20 @@ const newArr = arr.map((elem) => elem * elem);
         greetFriends("Abul", "kabul", "Babul");
     };
     // Destructure
+    const AdminUser = {
+        id: 4357,
+        name: {
+            firstName: 'Nabab',
+            middleNAme: 'bahadur',
+            lastName: 'KhanShaheb'
+        },
+        contactNo: '0380000',
+        email: 'khan@yahoo.com'
+    };
+    const { contactNo } = AdminUser;
+    //Array destructure
+    const myFriend = ['Ron', 'Bon', 'Ton', 'Rachel', 'Gacel'];
+    const [, , BestF, ...rest] = myFriend;
+    console.log(myFriend);
 }
 //# sourceMappingURL=test.js.map
