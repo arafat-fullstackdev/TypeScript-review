@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 let course = "Next Level Web Development";
-console.log(course);
+//console.log(course);
 // Data type
-let firstCode = 'C++ Code';
+let firstCode = "C++ Code";
 //number
 let roll = 321;
 //boolean
@@ -13,23 +13,23 @@ let valueAssign = null;
 //undefined
 let undefinedV = undefined;
 length;
-//Check 
+//Check
 let d;
 // d = 123;
 // d= "str";
 d = true;
 //? Areray
-let friends = ['Ro', 'go'];
+let friends = ["Ro", "go"];
 let nombor = [2, 3, 4];
 nombor[0] = 88;
 //tuple
 //array->order->-->type of value
-let tupleValue = [32, '54'];
+let tupleValue = [32, "54"];
 //* Reference type object
 const user = {
     company: "Coding Master",
     firstName: "Demne",
-    lastName: "Gregor"
+    lastName: "Gregor",
 };
 //? Learning Function
 //Normal function
@@ -46,23 +46,23 @@ const myBalence = {
     balance: 0,
     addBalance(balance) {
         return `My Balance ${this.balance + balance}`;
-    }
+    },
 };
 const arr = [3, 4, 5];
 const newArr = arr.map((elem) => elem * elem);
 {
     // Spred operator
-    const bros1 = ['Laltu', 'Maltu', 'Boltu'];
-    const bros2 = ['Mukshes', 'Suresh', 'Romesh'];
+    const bros1 = ["Laltu", "Maltu", "Boltu"];
+    const bros2 = ["Mukshes", "Suresh", "Romesh"];
     bros1.push(...bros2);
     const mentor1 = {
-        typescript: 'Boris',
-        redux: 'Paul',
-        rdms: 'Emanual'
+        typescript: "Boris",
+        redux: "Paul",
+        rdms: "Emanual",
     };
     const mentor2 = {
-        next: 'Udemy',
-        docker: 'Coursera'
+        next: "Udemy",
+        docker: "Coursera",
     };
     //destructure
     const mentorList = Object.assign(Object.assign({}, mentor1), mentor2);
@@ -76,17 +76,45 @@ const newArr = arr.map((elem) => elem * elem);
     const AdminUser = {
         id: 4357,
         name: {
-            firstName: 'Nabab',
-            middleNAme: 'bahadur',
-            lastName: 'KhanShaheb'
+            firstName: "Nabab",
+            middleNAme: "bahadur",
+            lastName: "KhanShaheb",
         },
-        contactNo: '0380000',
-        email: 'khan@yahoo.com'
+        contactNo: "0380000",
+        email: "khan@yahoo.com",
     };
     const { contactNo } = AdminUser;
     //Array destructure
-    const myFriend = ['Ron', 'Bon', 'Ton', 'Rachel', 'Gacel'];
+    const myFriend = ["Ron", "Bon", "Ton", "Rachel", "Gacel"];
     const [, , BestF, ...rest] = myFriend;
     console.log(myFriend);
+    const developer1 = {
+        name: "Hablu",
+        age: 50,
+        mobile: "23344566",
+        address: "Comlla",
+        gender: "Male",
+    };
+    const developer2 = {
+        name: "Gablu",
+        age: 40,
+        address: "Feni",
+        gender: "Male",
+    };
+    const developerName = "White Mure";
+    const developerJob = true;
+    const addValue = (a, b) => a + b;
+    const fullStackEngineer = {
+        skills: ['HTML', 'JS'],
+        Role: "Frontend Engineer",
+        Role1: "Backend Engineer"
+    };
+    //Ternary, optional chaining & nullish coalescing operator
+    const age = 18;
+    if (age >= 18)
+        console.log('Adult');
+    else
+        ('Not Adult');
+    console.log('TS');
 }
 //# sourceMappingURL=test.js.map

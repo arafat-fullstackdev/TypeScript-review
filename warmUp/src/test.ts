@@ -1,5 +1,5 @@
 let course: String = "Next Level Web Development";
-console.log(course);
+//console.log(course);
 
 // Data type
 let firstCode: string = "C++ Code";
@@ -156,4 +156,42 @@ const newArr: number[] = arr.map((elem: number): number => elem * elem);
    type Add=(a:number,b:number)=>number;
 
    const addValue:Add=(a,b)=> a + b;
+
+   // Union type 
+//    type FrontendDeveloper = 'React JS' | 'Next JS' // String literal type (use value)
+
+//    type FullStackDeveloper = 'Backend Developer'| 'Soft Arch'
+
+//    type  FullStackEngineer= FrontendDeveloper | FrontendDeveloper 
+
+//    const newDeveloper: FrontendDeveloper = "Next JS"
+
+   //InterSection
+
+   type FrontendEngineer ={
+    skills:string[];
+    Role: "Frontend Engineer";
+   }
+
+   type BackendEngineer={
+    skills: string[];
+    Role1: 'Backend Engineer';
+   }
+
+   type FullStackEngineer = FrontendEngineer & BackendEngineer;
+
+   const fullStackEngineer:FullStackEngineer = {
+      skills:['HTML', 'JS'],
+      Role: "Frontend Engineer",
+      Role1:"Backend Engineer"
+   }
+
+   //Ternary, optional chaining & nullish coalescing operator
+   const age:number = 18;
+
+
+   if(age>= 18) console.log('Adult');
+   else('Not Adult');
+
+console.log('TS')
 }
