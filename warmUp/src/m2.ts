@@ -1,68 +1,117 @@
-import console = require("console");
-import querystring = require("querystring");
-
 {
+  // Type assertation
+  let anyThing: any;
 
-    // Type assertation
-    let anyThing: any;
+  anyThing = "Next Level Developer!";
+  anyThing = 222;
+  anyThing = true;
 
-    anyThing = "Next Level Developer!";
-    anyThing = 222;
-    anyThing = true;
+  anyThing as boolean;
 
-    (anyThing as boolean)
+  const kgToGm = (value: string | null): string | number | undefined => {
+    if (typeof value === "string") {
+      const convertValue = parseFloat(value) * 1000;
+      return ` The convert value is ${convertValue}`;
+    } else if (typeof value === "number") {
+      //  const convertValue= stringify(value);
+      // return convertValue;
 
-    const kgToGm=(value: string | null): string| number | undefined=>{
-        if(typeof value ===  'string'){
-            const convertValue= parseFloat(value)*1000;
-            return` The convert value is ${convertValue}`;
-        } else if(typeof value === 'number'){
-            //  const convertValue= stringify(value);
-            // return convertValue;
-
-            return value * 1000;
-        }else{
-            console.log('Wrong input')
-        }
+      return value * 1000;
+    } else {
+      console.log("Wrong input");
     }
-      const result =kgToGm(78) as number;
-      const result1 = kgToGm("23") as string;
-//  console.log(result)    
+  };
+  const result = kgToGm(78) as number;
+  const result1 = kgToGm("23") as string;
+  //  console.log(result)
 
-// type customError = {
-//     message: string;
-// }
-//   try{
+  // type customError = {
+  //     message: string;
+  // }
+  //   try{
 
-//   }catch(error){
-  
-//     console.log((error as customError).message)
-//   }
+  //   }catch(error){
 
-// Interface 
+  //     console.log((error as customError).message)
+  //   }
 
-type User1={   // TYpe Alieas declare
+  // Interface
+
+  type User1 = {
+    // TYpe Alieas declare
     name: string;
     salery: number;
-}
+  };
 
-interface User2{  // Interface declare
+  interface User2 {
+    // Interface declare
     name: string;
     salery: number;
-}
+  }
 
-const user1: User1={
-    name: 'Hable Developer',
-    salery: 12000
+  const user1: User1 = {
+    name: "Hable Developer",
+    salery: 12000,
+  };
 
-}
+  const user2: User2 = {
+    name: "Gablue Developer",
+    salery: 23000,
+  };
 
-const user2: User2={
-    name: 'Gablue Developer',
-    salery: 23000
-}
+  // Object -->> Array-->obj   function--> obj
+  //
 
+  type GreetFun = {
+    (name: string): string;
+    description: string;
+  };
 
-// Object -->> Array-->obj   function--> obj 
-    //
+  const greet: GreetFun = (name: string) => {
+    return `Hello ${name}`;
+  };
+
+  greet.description = "A new World";
+
+  console.log(greet("Alice"));
+  console.log(greet.description);
+
+  // type generic
+
+  type GenericType<param> = Array<param>; // Define Type Fgeneric
+
+  // const rollNum: number[]= [1,2,3,4,5];
+  const rollNum: GenericType<number> = [1, 2, 3, 4, 5];
+
+  // const mentors: string[]=["a","b","c"];
+  const mentors: GenericType<string> = ["a", "b", "c"];
+
+  // const boolArr: boolean[]=[true,false,true];
+  const boolArr: GenericType<boolean> = [true, false, true];
+
+  const DefineArr: GenericType<number> = [1, 2, 3];
+
+  const addValue = (n: number, m: number) => n + m;
+  addValue(4, 7);
+
+  const adminUser: GenericType<{ name: string; age: number }> = [
+    {
+      name: "Bob Wolmare",
+      age: 100,
+    },
+    {
+      name: "Don Jonson",
+      age: 120,
+    },
+  ];
+
+  // Generic Tuple
+  type GenericTuple<a, b> = [a, b];
+
+  const developerHub: GenericTuple<string, number> = ["devA", 10];
+
+  const UserId: GenericTuple<number, { name: string; email: string }> = [
+    12343,
+    { name: "hubDev", email: "gmail@yahoo.com" },
+  ];
 }
