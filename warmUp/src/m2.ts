@@ -21,7 +21,7 @@
       console.log("Wrong input");
     }
   };
-  const result = kgToGm(78) as number;
+  const result = kgToGm("78") as number;
   const result1 = kgToGm("23") as string;
   //  console.log(result)
 
@@ -114,4 +114,21 @@
     12343,
     { name: "hubDev", email: "gmail@yahoo.com" },
   ];
+
+
+  interface InternDev{   //Interface define
+    name: string;
+    role:string;
+    sallery:number;
+  }
+
+  const internDev:GenericType<InternDev>=[
+    {
+    name:"Dev man",
+    role:"TS",
+    sallery: 4
+  }
+  ]
+
+
 }
