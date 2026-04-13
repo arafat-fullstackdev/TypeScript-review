@@ -58,4 +58,59 @@ const area1: AreaString<{height: string;width:number}>={
    height: "100",
    width: 23
 }
+
+// Utility type
+
+type Person={
+    name: string;
+    age:number;
+    email?: string;
+    location: string;
+    role: boolean;
+
+}
+ //pic
+ type AccesPerson= Pick<Person, "name"| "role">
+
+ // omit
+ type Contact = Omit<Person, "name"|"age">
+//required
+type PersonRequired= Required<Person>
+
+//partial
+type PersonPartial= Partial<Person>
+
+//readonly
+type PersonReadpnly= Readonly<Person>
+
+const personInfo:PersonReadpnly={
+    name: "Demi More",
+    age:50,
+    location:"comilla",
+    role:true,
+}
+
+//personInfo.name="Jonathon"
+
+//recore
+// type MyObject={
+// name: string;
+// city:string;
+
+// }
+
+type MyObject= Record<string,string> // Dynamic 
+
+const obj1:MyObject={
+    name:"af",
+    city:"comilla",
+    email:'email',
+    
+}
+
+const emptyObj: Record<string,unknown>={
+    name:'name',
+    role:true
+}
+
 }
