@@ -10,7 +10,7 @@
     "Hello World, I will complete this course successfully and become a Next level Web Developer!";
   // console.log(course)
   let course1: Veriable1 = "Next Level Devloper";
-  console.log(course1);
+  //console.log(course1);
 
   //task 2
   type User = (name: string, age: number, role: string) => string;
@@ -96,4 +96,16 @@
   };
 
   //console.log(company);
+
+  // Task 5: Function Type
+
+  type StringReturn= string;
+ const reverseString=(str:StringReturn):StringReturn=>{
+     return str.split('').reverse().join('')
+ }
+ const input:StringReturn = 'bank';
+ const outPut:StringReturn= reverseString(input);
+ console.log(outPut)
+ reverseString('Hello')
+
 }
